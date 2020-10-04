@@ -1,0 +1,229 @@
+<HTML>
+
+<HEAD>
+    <link rel="icon" href="data:,">
+    <title>CHEF BLOG</title>
+    <link rel="stylesheet" type="text/css" href="css/micss.css" />
+    <script type="text/javascript" src="js/jquery.js"> </script>
+    <script type="text/javascript" src="js/misClases.js"> </script>
+    <script type="text/javascript" src="js/micodigo.js"> </script>
+
+
+</HEAD>
+
+<body>
+
+    <div id="contenedor">
+        <div id="cabezal" class="clearfix">
+            <!-- BOTÓN PARA AGREGAR RECETA -->
+            <input id="btnAgregarReceta" type="button" class="adminColab" value="Agregar receta" />
+            <!-- BOTÓN PARA AGREGAR COLABORADOR -->
+            <input id="btnAgregarColab" type="button" class="administrador" value="Agregar Colaborador" />
+            <!-- BOTÓN PARA MOSTRAR COLABORADORES -->
+            <input id="btnListarColaboradores" type="button" class="administrador" value="Listar Colaboradores" />
+            <!-- BOTÓN PARA REPORTES -->
+            <input id="btnReportes" type="button" class="administrador" value="Reportes" />
+
+
+
+
+            <!-- LOGO DE LA PÁGINA -->
+            <img id="logo" src="http://chefblog.develotion.com/logochef.png" alt="logo">
+
+
+            <ul id="navPrincipal">
+
+                <!-- INICIAR SESIÓN -->
+                <div id="divOcultarIniciarSesion">
+                    <li id="LiIniciarSesion">
+                        <a>Iniciar sesión</a>
+                    </li>
+                    <div id="aux">
+                        <div id="divMostrarIniciarSesion" class="funcionalidades">
+                            <!-- Ingresar usuario -->
+                            <label for="txtUsuario">Usuario: &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input id="txtUsuario" type="text" class="vaciarIniSesion"
+                                placeholder="Ingrese su usuario" /><br>
+
+                            <!-- Ingresar contraseña -->
+                            <label for="txtContraseña">Contraseña:</label>
+                            <input id="txtContraseña" type="password" class="vaciarIniSesion"
+                                placeholder="Ingrese su contraseña" /><br>
+
+                            <!-- Botón -->
+                            <input id="btnIniciar" type="button" value="Iniciar" />
+
+                            <!-- Notificaciones -->
+                            <div id="divNotificacionIniSesion"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- CERRAR SESIÓN -->
+                <li id="LiCerrarSesion">
+                    <a>Cerrar sesión</a>
+                </li>
+            </ul>
+
+        </div>
+
+
+
+
+
+
+        <div id="contenido">
+
+            <!-- BUSQUEDA DE RECETAS -->
+
+            <h3>Buscar Receta</h3>
+            <input type="text" id="txtBuscarReceta" placeholder="Ingrese un nombre de receta"><br>
+
+            <!-- Botón -->
+            <input id="btnBuscarReceta" type="button" value="Buscar"><br>
+
+            <!-- Notificaciones -->
+            <div id="divNotificacionesBusqueda"></div>
+
+
+            
+
+
+
+
+            <!-- INGRESO DE RECETAS -->
+            <div id="divIngresoRecetas" class="funcionalidades">
+
+                <hr> <!-- Para dividir entre secciones -->
+                <br> <!-- Para separar -->
+
+                <!-- Ingresar título -->
+                <label for="txtTitulo">Título:</label>
+                <input type="text" id="txtTitulo" class="vaciarIngReceta" placeholder="Ingrese un título" /><br>
+
+                <!-- Ingresar foto -->
+                <label for="fileFoto">Foto:</label>
+                <input type="file" id="fileFoto" class="vaciarIngReceta" /><br>
+
+                <!-- Ingresar tiempo -->
+                <label for="txtTiempo">Tiempo:</label>
+                <input type="text" id="txtTiempo" class="vaciarIngReceta" placeholder="Ingrese tiempo en minutos" /><br>
+
+                <!-- Ingresar elaboración -->
+                <label for="txtElaboración">Elaboración:</label>
+                <textarea id="txtElaboración" class="vaciarIngReceta"
+                    placeholder="Ingrese elaboración - máximo 150 caracteres"></textarea><br>
+
+                <p>
+                    <!-- Botón agrergar receta -->
+                    <input id="btnAgregarReceta2" type="button" value="Agregar" />
+                </p>
+
+                <!-- Notificaciones -->
+                <div id="divNotificacionesIngReceta"></div>
+            </div>
+
+
+
+
+
+
+
+
+            <!-- INGRESO DE COLABORADORES -->
+            <div id="divIngresoColaboradores" class="funcionalidades">
+
+                <hr> <!-- Para dividir entre secciones -->
+                <br> <!-- Para separar -->
+
+                <!-- Ingresar Nombre -->
+                <label for="txtNombre">Nombre:</label>
+                <input type="text" id="txtNombre" class="vaciarIngColab" placeholder="Ingrese un nombre" /><br>
+
+                <!-- Ingresar Apellido -->
+                <label for="txtApellido">Apellido:</label>
+                <input type="text" id="txtApellido" class="vaciarIngColab" placeholder="Ingrese un apellido" /><br>
+
+                <p>
+                    <!-- Botón registrar -->
+                    <input id="btnRegistrarColab" type="button" value="Registrar" />
+                </p>
+
+                <!-- Notificaciones -->
+                <div id="divNotificacionesIngColaboradores"></div>
+
+            </div>
+
+
+
+
+
+
+
+            
+            <!-- LISTADO DE COLABORADORES -->
+            <div id="divListadoDeColaboradores" class="funcionalidades">
+
+                <hr> <!-- Para dividir entre secciones -->
+                <br> <!-- Para separar -->
+
+                <label>Colaboradores</label><br>
+                <br> <!-- Para separar -->
+
+                <label>Seleccione el Colaborador que desea deshabilitar o rehabilitar</label>
+
+                <div id="divListarColaboradores"></div>
+
+                <!-- Notificaciones -->
+                <div id="divNotificaciones"></div>
+            </div>
+
+
+
+
+
+
+
+            <!-- REPORTES -->
+            <div id="divReportes" class="funcionalidades">
+
+                <hr> <!-- Para dividir entre secciones -->
+
+                <h3>Reportes</h3>
+                <!-- Ingresar tiempo -->
+                <label for="txtTiempoReportes">Tiempo:</label><br>
+                <input type="text" id="txtTiempoReportes" placeholder="Ingrese un tiempo en min"><br><br>
+
+                <!-- Botón para mostrar la cantidad de recetas que tardan hasta ese tiempo y más de ese tiempo -->
+                <input id="btnTiempoReportes" type="button" value="Mostrar por tiempo"><br>
+
+                <!-- Botón para mostrar la/las recetas de mayor duración. -->
+                <input id="btnMaximoReportes" type="button" value="Mostrar recetas con mayor duración"><br>
+
+                <!-- Botón para mostrar la/las recetas con mejor porcentaje de rendimiento -->
+                <input id="btnPorcentajeReportes" type="button" value="Mostrar recetas con mejor rendimiento"><br>
+
+                <!-- Notificaciones -->
+                <div id="divNotificacionesReportes"></div>
+            </div>
+
+
+
+
+
+            <hr> <!-- Para dividir entre secciones -->
+            <hr> <!-- Para dividir entre secciones -->
+
+
+            <!-- MOSTRAR RECETAS AL INICIO -->
+            <div id="divMuestroRecetas"></div>
+
+
+        </div>
+
+    </div>
+</body>
+
+</HTML>
